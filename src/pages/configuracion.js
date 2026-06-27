@@ -1,5 +1,6 @@
 import { navigate } from '../main.js';
 import { db } from '../db.js';
+import logo from '../assets/logo.png';
 
 export async function render(container) {
   const usuarioId = parseInt(localStorage.getItem('usuarioId'));
@@ -46,7 +47,7 @@ export async function render(container) {
       <div class="card">
         <h2 style="font-size:15px;font-weight:700;font-family:'Poppins',sans-serif;margin-bottom:16px;">Acerca de Spendí</h2>
         <div style="display:flex;justify-content:center;margin-bottom:12px;">
-          <img src="/src/assets/logo.png" alt="Spendí" style="width:80px;height:auto;" />
+          <img src="${logo}" alt="Spendí" style="width:80px;height:auto;" />
         </div>
         <p style="font-size:13px;color:var(--texto-suave);font-family:'Inter',sans-serif;text-align:center;line-height:1.6;">Spendí no busca restringir el gasto, sino promover una relación más saludable y consciente con el dinero.</p>
         <p style="font-size:12px;color:var(--texto-suave);font-family:'Inter',sans-serif;text-align:center;margin-top:12px;">Versión 1.0.0</p>
