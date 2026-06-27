@@ -3,6 +3,7 @@ import { db } from '../db.js';
 import { renderNav } from '../components/nav.js';
 import { renderSemaforo } from '../components/semaforo.js';
 import { renderGrafico } from '../components/grafico.js';
+import spendiLogo from '../assets/spendisinletra.png';
 
 const iconosCategorias = {
   Comida: '🍔',
@@ -110,7 +111,7 @@ export async function render(container) {
     <div class="page">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
         <div style="display:flex;align-items:center;gap:10px;">
-          <img src="/src/assets/spendisinletra.png" alt="Spendí" style="width:46px;height:46px;object-fit:contain;" />
+          <img src="${spendiLogo}" alt="Spendí" style="width:46px;height:46px;object-fit:contain;" />
           <div>
             <p style="color:var(--texto-suave);font-size:13px;font-family:'Inter',sans-serif;">Hola,</p>
             <h1 style="font-size:20px;font-weight:800;font-family:'Poppins',sans-serif;">${usuarioNombre} 👋</h1>
@@ -118,7 +119,6 @@ export async function render(container) {
         </div>
         <div id="btn-config" style="width:38px;height:38px;border-radius:50%;background:var(--blanco);box-shadow:var(--sombra-card);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;">⚙️</div>
       </div>
-        
 
       <div class="card" id="card-presupuesto">
         ${renderPresupuesto()}

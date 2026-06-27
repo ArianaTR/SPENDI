@@ -1,5 +1,6 @@
 import { navigate } from '../main.js';
 import { db } from '../db.js';
+import logo from '../assets/logo.png';
 
 export function render(container) {
   container.innerHTML = `
@@ -7,7 +8,7 @@ export function render(container) {
       
       <!-- Logo -->
       <div style="text-align:center;margin-bottom:32px;">
-        <img src="/src/assets/logo.png" alt="Spendí" style="width:100px;height:auto;margin-bottom:12px;" />
+        <img src="${logo}" alt="Spendí" style="width:100px;height:auto;margin-bottom:12px;" />
         <p style="color:var(--texto-suave);font-size:14px;font-family:'Inter',sans-serif;">Crea tu cuenta gratis</p>
       </div>
 
