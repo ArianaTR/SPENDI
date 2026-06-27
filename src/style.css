@@ -1,0 +1,338 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* Variables */
+:root {
+  --verde: #55BB2F;
+  --verde-claro: #ECF39E;
+  --verde-oscuro: #3d8a22;
+  --amarillo: #ECF39E;
+  --naranja: #FF8963;
+  --rojo: #EB5D53;
+  --fondo: #FAF9F6;
+  --blanco: #FFFFFF;
+  --texto: #2B2B2B;
+  --texto-suave: #7A7A7A;
+  --borde: #E8E8E4;
+  --sombra: 0 4px 16px rgba(85,187,47,0.10);
+  --sombra-card: 0 2px 12px rgba(0,0,0,0.07);
+  --radio: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-size: 16px;
+}
+
+#app {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--fondo);
+  position: relative;
+}
+
+/* Tipografía */
+h1, h2, h3, .page-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+/* Botones */
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #55BB2F, #3d8a22);
+  color: white;
+  border: none;
+  border-radius: var(--radio);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(85,187,47,0.3);
+  letter-spacing: 0.3px;
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  color: var(--verde);
+  border: 2px solid var(--verde);
+  border-radius: var(--radio);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:active {
+  background: var(--verde-claro);
+}
+
+.btn-danger {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #EB5D53, #c94840);
+  color: white;
+  border: none;
+  border-radius: var(--radio);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(235,93,83,0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-danger:active {
+  transform: scale(0.97);
+}
+
+/* Inputs */
+.input-field {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid var(--borde);
+  border-radius: var(--radio);
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background: var(--blanco);
+  color: var(--texto);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 4px rgba(85,187,47,0.1);
+}
+
+/* Cards */
+.card {
+  background: var(--blanco);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--sombra-card);
+  margin-bottom: 16px;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform 0.15s ease;
+}
+
+.card:active {
+  transform: scale(0.99);
+}
+
+/* Navegación inferior */
+.nav-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  background: var(--blanco);
+  border-top: 1px solid var(--borde);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0 20px;
+  z-index: 100;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: var(--texto-suave);
+  font-size: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.nav-item.active {
+  color: var(--verde);
+}
+
+.nav-item.active svg {
+  filter: drop-shadow(0 2px 4px rgba(85,187,47,0.3));
+}
+
+.nav-item svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:active svg {
+  transform: scale(0.9);
+}
+
+/* Página */
+.page {
+  padding: 24px 20px 100px;
+  overflow-y: auto;
+}
+
+/* Títulos */
+.page-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--texto);
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: var(--texto-suave);
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* Alertas */
+.alerta {
+  padding: 14px 16px;
+  border-radius: var(--radio);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.alerta-verde {
+  background: #E8F5E0;
+  color: #2d6a16;
+  border-left: 4px solid var(--verde);
+}
+
+.alerta-amarillo {
+  background: #FFF8E1;
+  color: #8a6500;
+  border-left: 4px solid var(--naranja);
+}
+
+.alerta-rojo {
+  background: #FDECEA;
+  color: #8B1A14;
+  border-left: 4px solid var(--rojo);
+}
+
+/* Barra semáforo */
+.barra-container {
+  width: 100%;
+  height: 14px;
+  background: var(--fondo);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 10px 0;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.barra-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.barra-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page > * {
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+/* Chip / badge */
+.chip {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chip-verde { background: #E8F5E0; color: #2d6a16; }
+.chip-naranja { background: #FFF0E8; color: #8a3500; }
+.chip-rojo { background: #FDECEA; color: #8B1A14; }
+.chip-gris { background: var(--fondo); color: var(--texto-suave); }
+/* Fix inputs fecha en iOS */
+input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  display: block;
+  min-height: 48px;
+}
+
+input[type="time"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  display: block;
+  min-height: 48px;
+}
+
+input[type="number"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
